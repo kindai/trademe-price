@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Trademe Price",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.trademe.co.nz/property/*",
+        "https://www.trademe.co.nz/property/*"
+      ],
+      "js": [
+        "content.bundle.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "http://*/",
+    "https://*/"
+  ]
+}
