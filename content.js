@@ -6,7 +6,7 @@ const HOMESSEARCHURL = 'https://address-search.homes.co.nz/typeahead/search'
 const HOMESDETAILURL = 'https://spark-nz.cloud.tyk.io/homes/web/public/v1/properties'
 const DELTA = 0.002;
 
-const RELABSEARCHURL = 'https://spark-nz.cloud.tyk.io/relab/v1/findaddress16eedd2-3e948'
+const RELABSEARCHURL = 'https://spark-nz.cloud.tyk.io/relab/v1/findaddressbbbd14c-13827'
 const RELABDETAILURL = 'https://spark-nz.cloud.tyk.io/relab/v1/finprepriceinfocache'
 
 class Toolbar extends React.Component{
