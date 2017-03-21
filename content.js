@@ -6,7 +6,7 @@ const HOMESSEARCHURL = 'https://address-search.homes.co.nz/typeahead/search'
 const HOMESDETAILURL = 'https://spark-nz.cloud.tyk.io/homes/web/public/v1/properties'
 const DELTA = 0.002;
 
-const RELABSEARCHURL = 'https://spark-nz.cloud.tyk.io/relab/v1/findaddressbbbd14c-13827'
+const RELABSEARCHURL = 'https://spark-nz.cloud.tyk.io/relab/v1/findaddress2489d25-f1731'
 const RELABDETAILURL = 'https://spark-nz.cloud.tyk.io/relab/v1/finprepriceinfocache'
 
 class Toolbar extends React.Component{
@@ -89,7 +89,16 @@ class Toolbar extends React.Component{
 	}
 
 	componentDidMount() {
-		let addr = document.getElementById('ListingAttributes').children[0].children[0].children[1].innerText
+		let addr;
+		try{
+			addr = document.getElementById('ListingAttributes').children[0].children[0].children[1].innerText
+		}catch(err){
+
+		}
+		
+		if(!addr){
+			addr = document.getElementById('content').getElementsByClassName('container')[0].getElementsByTagName('h1')[0].innerText
+		}
 		this.setState(Object.assign({}, this.state, {
 			address: addr
 		}));

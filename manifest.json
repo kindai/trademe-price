@@ -1,12 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "Trademe Price",
+  "name": "Trademe Property Estimates",
   "version": "0.1",
   "content_scripts": [
     {
       "matches": [
-        "http://www.trademe.co.nz/property/*",
-        "https://www.trademe.co.nz/property/*"
+        "http://www.trademe.co.nz/*",
+        "https://www.trademe.co.nz/*",
+        "https://www.barfoot.co.nz/*"
       ],
       "js": [
         "content.bundle.js"
